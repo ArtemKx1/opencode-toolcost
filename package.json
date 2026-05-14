@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
-  "name": "@artem.k/opencode-toolcost",
+  "name": "@artem-kuprin/opencode-toolcost",
   "version": "1.0.0",
   "description": "OpenCode plugin — real-time per-tool token cost breakdown in TUI sidebar",
   "type": "module",

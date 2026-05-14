@@ -5,7 +5,7 @@
 ### See exactly how much each tool is costing you — live in the OpenCode TUI sidebar
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![npm version](https://img.shields.io/npm/v/@artem.k/opencode-toolcost)](https://www.npmjs.com/package/@artem.k/opencode-toolcost)
+[![npm version](https://img.shields.io/npm/v/@artem-kuprin/opencode-toolcost)](https://www.npmjs.com/package/@artem-kuprin/opencode-toolcost)
 [![OpenCode plugin](https://img.shields.io/badge/OpenCode-plugin-blue)](https://opencode.ai)
 
 </div>
@@ -44,7 +44,7 @@ Other cost trackers show you the **total bill**. This one tells you **what exact
 
 ```json
 {
-  "plugin": ["@artem.k/opencode-toolcost"]
+  "plugin": ["@artem-kuprin/opencode-toolcost"]
 }
 ```
 
@@ -52,7 +52,7 @@ Other cost trackers show you the **total bill**. This one tells you **what exact
 
 ```json
 {
-  "plugin": ["@artem.k/opencode-toolcost"]
+  "plugin": ["@artem-kuprin/opencode-toolcost"]
 }
 ```
 
