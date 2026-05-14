@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@artem.k/opencode-toolcost",
+  "version": "0.1.0",
+  "description": "OpenCode plugin — real-time per-tool token cost breakdown in TUI sidebar",
+  "type": "module",
+  "main": "./dist/toolcost.js",
+  "types": "./dist/toolcost.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/toolcost.d.ts",
+      "default": "./dist/toolcost.js"
+    },
+    "./server": {
+      "types": "./dist/toolcost.d.ts",
+      "default": "./dist/toolcost.js"
+    },
+    "./tui": {
+      "types": "./dist/tui.d.ts",
+      "default": "./dist/tui.tsx"
+    }
+  },
+  "oc-plugin": [
+    "server",
+    "tui"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "npm run clean && tsc && node scripts/copy-tui.mjs",
+    "prepublishOnly": "npm run build",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "plugin",
+    "token-usage",
+    "cost-tracking",
+    "tool-cost",
+    "sidebar",
+    "cost"
+  ],
+  "homepage": "https://github.com/ArtemKx1/opencode-toolcost#readme",
+  "bugs": {
+    "url": "https://github.com/ArtemKx1/opencode-toolcost/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArtemKx1/opencode-toolcost.git"
+  },
+  "author": {
+    "name": "Artem K.",
+    "email": "artem.kx@proton.me",
+    "url": "https://github.com/ArtemKx1"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "@opencode-ai/plugin": "^1.3.5",
+    "@opencode-ai/sdk": "^1.3.5"
+  },
+  "dependencies": {
+    "@opentui/core": "^0.1.92",
+    "@opentui/solid": "^0.1.92",
+    "solid-js": "^1.9.10"
+  },
+  "devDependencies": {
+    "@opencode-ai/plugin": "^1.4.7",
+    "@opencode-ai/sdk": "^1.4.7",
+    "@types/bun": "^1.2.0",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0"
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ]
+}
