@@ -12,6 +12,16 @@
 
 ---
 
+## ⚡ Quick Start
+
+```bash
+npm install -g @artem-kuprin/opencode-toolcost
+```
+
+Then add `"@artem-kuprin/opencode-toolcost"` to the `plugin` array in your `opencode.json` and `tui.json`, then restart OpenCode.
+
+---
+
 ## ✨ Why opencode-toolcost?
 
 Other cost trackers show you the **total bill**. This one tells you **what exactly you're paying for**:
@@ -40,25 +50,45 @@ Other cost trackers show you the **total bill**. This one tells you **what exact
 
 ## 📦 Install
 
-### Server plugin — `opencode.json`:
+### Prerequisites
 
+- **Node.js** >= 18
+- **npm** (comes with Node.js)
+- **OpenCode** >= 1.2.15
+
+### Step 1 — Install the package
+
+```bash
+npm install -g @artem-kuprin/opencode-toolcost
+```
+
+> Or install locally in your project: `npm install @artem-kuprin/opencode-toolcost`
+
+### Step 2 — Configure
+
+Add the plugin to OpenCode config files. Server plugins go in `opencode.json`, TUI plugins in `tui.json`:
+
+**`opencode.json`** (server plugin — enables `/toolcost` command & cost tracking):
 ```json
 {
   "plugin": ["@artem-kuprin/opencode-toolcost"]
 }
 ```
 
-### TUI plugin — `tui.json`:
-
+**`tui.json`** (TUI plugin — enables the live sidebar panel):
 ```json
 {
   "plugin": ["@artem-kuprin/opencode-toolcost"]
 }
 ```
 
-For OpenCode `>=1.2.15`, keep server plugins in `opencode.json` and TUI plugins in `tui.json`.
+### Step 3 — Restart
 
-Restart OpenCode.
+Restart OpenCode. You should see the `TOOL COST` block in the sidebar and be able to use `/toolcost` in chat.
+
+### Verify it works
+
+In any conversation, run `/toolcost`. If the plugin is loaded, a detailed report will be saved to `toolcost-output.txt`. You'll also see the `TOOL COST` sidebar panel during active LLM sessions.
 
 ---
 
